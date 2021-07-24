@@ -6,11 +6,8 @@ export class ProductService {
   private _albumUrl = "../assets/album.json";
   resdata : any;
   constructor(private _http:Http) { }
-
   getAlbum(id:Number){
-    console.log("I am going to get the details ")
     this.resdata = this._http.get(this._albumUrl).map(response=>response.json());
-    console.log(this.resdata);
     return this.resdata;
   }
 }
