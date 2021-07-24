@@ -9,7 +9,7 @@ export class ProductService {
 
   getAlbum(id:number){
     console.log("I am going to get the details ")
-    this.resdata = this._http.get(this._albumUrl).map((response:Response)=>response.json());
+    this.resdata = this._http.get(this._albumUrl).map(response=>response.json());
     console.log(this.resdata);
     return this.resdata;
   }
